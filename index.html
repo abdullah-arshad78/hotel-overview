@@ -37,47 +37,20 @@
             <span class="user-nav__notification">7</span>
           </div>
 
-          <div class="user-nav__icon-box chat-icon">
+          <div class="user-nav__icon-box chat-icon" id="chat-icon">
             <svg class="user-nav__icon">
               <use xlink:href="img/sprite.svg#icon-chat"></use>
             </svg>
             <span class="user-nav__notification">13</span>
-
-            <div class="chat-box">
-              <div class="chat-box__helper">
-                <img
-                  src="img/helper-img.jpg"
-                  alt="helper pic"
-                  class="chat-box__helper-img"
-                />
-              </div>
-              <p class="chat-box__msg">
-                Hi, I am Mary. I can help you find more about our services!
-              </p>
-              <textarea
-                class="chat-box__text"
-                cols="20"
-                rows="5"
-                placeholder="Chat Here.."
-              ></textarea>
-              <button class="btn">send</button>
-            </div>
           </div>
 
-          <div class="user-nav__user">
+          <div class="user-nav__user" id="user-box">
             <img
               src="img/abdullah.jpg"
               alt="User Photo"
               class="user-nav__user-photo"
             />
             <span class="user-nav__user-name">Abdullah</span>
-
-            <div class="user-nav__user-menu">
-              <ul class="user-nav__user-menu-list">
-                <li class="user-nav__user-menu-item">Account</li>
-                <li class="user-nav__user-menu-item">Settings</li>
-              </ul>
-            </div>
           </div>
         </nav>
       </header>
@@ -276,5 +249,35 @@
         </main>
       </div>
     </div>
+
+    <div class="user-nav__user-menu" id="user-menu-box">
+      <span id="close-user-menu">&times;</span>
+      <ul class="user-nav__user-menu-list">
+        <li class="user-nav__user-menu-item">Account</li>
+        <li class="user-nav__user-menu-item">Settings</li>
+      </ul>
+    </div>
+    <div class="chat-box show" id="chat-box">
+      <span id="close">&times;</span>
+      <div class="chat-box__helper">
+        <img
+          src="img/helper-img.jpg"
+          alt="helper pic"
+          class="chat-box__helper-img"
+        />
+      </div>
+      <p class="chat-box__msg">
+        Hi, I am Mary. I can help you find more about our services!
+      </p>
+      <textarea
+        class="chat-box__text"
+        cols="20"
+        rows="5"
+        placeholder="Chat Here.."
+      ></textarea>
+      <button class="btn">send</button>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
