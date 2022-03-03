@@ -6,11 +6,6 @@ const userBox = document.getElementById("user-box");
 const userMenu = document.getElementById("user-menu-box");
 const closeUser = document.getElementById("close-user-menu")
 
-//Reseting so user menu and bhatbox don't appear when loading..
-
-userMenu.classList.remove("show-user-menu");
-chatBox.classList.remove("show");
-
 //Handle user menu
 userBox.addEventListener("click",()=>{
     userMenu.classList.add("show-user-menu");
