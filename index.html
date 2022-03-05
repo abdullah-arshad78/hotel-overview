@@ -10,10 +10,9 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
-
     <title>trillo &mdash; Your all-in-one booking app</title>
   </head>
-  <body>
+  <body class="styled-scrollbars">
     <div class="container">
       <header class="header">
         <img src="img/logo.png" alt="trillo-logo" class="logo" />
@@ -30,41 +29,56 @@
           </button>
         </form>
         <nav class="user-nav">
-          <div class="user-nav__icon-box">
+          <div
+            class="user-nav__icon-box user-nav__notifications-menu"
+            id="user-nav-notifications-menu"
+          >
             <svg class="user-nav__icon">
               <use xlink:href="img/sprite.svg#icon-bookmark"></use>
             </svg>
             <span class="user-nav__notification">7</span>
-          </div>
 
-          <div class="user-nav__icon-box chat-icon">
-            <svg class="user-nav__icon">
-              <use xlink:href="img/sprite.svg#icon-chat"></use>
-            </svg>
-            <span class="user-nav__notification">13</span>
-
-            <div class="chat-box">
-              <div class="chat-box__helper">
-                <img
-                  src="img/helper-img.jpg"
-                  alt="helper pic"
-                  class="chat-box__helper-img"
-                />
-              </div>
-              <p class="chat-box__msg">
-                Hi, I am Mary. I can help you find more about our services!
-              </p>
-              <textarea
-                class="chat-box__text"
-                cols="20"
-                rows="5"
-                placeholder="Chat Here.."
-              ></textarea>
-              <button class="btn">send</button>
+            <div class="notifications" id="notifications">
+              <h2 class="notifications-heading">Notifications</h2>
+              <div
+                class="notifications-box styled-scrollbars-ul"
+                id="notifications-container"
+              ></div>
             </div>
           </div>
 
-          <div class="user-nav__user">
+          <div class="user-nav__icon-box chat-icon" id="chat-icon">
+            <svg class="user-nav__icon">
+              <use xlink:href="img/sprite.svg#icon-chat"></use>
+            </svg>
+            <span class="user-nav__notification">10</span>
+
+            <div class="chat-icon__msgs" id="chat-container">
+              <div class="chat-icon__header">
+                <h2 class="chat-icon__header-heading">Messages</h2>
+                <form action="/" class="search">
+                  <input
+                    type="text"
+                    class="search__input"
+                    placeholder="Search messages"
+                  />
+                  <button class="search__button">
+                    <svg class="search__icon">
+                      <use
+                        xlink:href="img/sprite.svg#icon-magnifying-glass"
+                      ></use>
+                    </svg>
+                  </button>
+                </form>
+              </div>
+              <ul
+                class="chat-icon__msgs-container styled-scrollbars-ul"
+                id="chat-box"
+              ></ul>
+            </div>
+          </div>
+
+          <div class="user-nav__user" id="user-menu">
             <img
               src="img/abdullah.jpg"
               alt="User Photo"
@@ -72,11 +86,64 @@
             />
             <span class="user-nav__user-name">Abdullah</span>
 
-            <div class="user-nav__user-menu">
-              <ul class="user-nav__user-menu-list">
-                <li class="user-nav__user-menu-item">Account</li>
-                <li class="user-nav__user-menu-item">Settings</li>
-              </ul>
+            <div class="user-nav__menu" id="user-menu-box">
+              <div class="user-nav__menu-box">
+                <svg class="user-nav__menu-box-icon">
+                  <use xlink:href="img/sprite.svg#icon-user"></use>
+                </svg>
+                <p class="user-nav__menu-box-text">View Profile</p>
+                <svg class="user-nav__menu-box-icon arrow">
+                  <use
+                    xlink:href="img/sprite.svg#icon-chevron-thin-right"
+                  ></use>
+                </svg>
+              </div>
+              <div class="user-nav__menu-box">
+                <svg class="user-nav__menu-box-icon">
+                  <use xlink:href="img/sprite.svg#icon-cog"></use>
+                </svg>
+                <p class="user-nav__menu-box-text">Settings</p>
+                <svg class="user-nav__menu-box-icon arrow">
+                  <use
+                    xlink:href="img/sprite.svg#icon-chevron-thin-right"
+                  ></use>
+                </svg>
+              </div>
+              <div class="user-nav__menu-box">
+                <svg class="user-nav__menu-box-icon">
+                  <use xlink:href="img/sprite.svg#icon-old-phone"></use>
+                </svg>
+                <p class="user-nav__menu-box-text">Support</p>
+                <svg class="user-nav__menu-box-icon arrow">
+                  <use
+                    xlink:href="img/sprite.svg#icon-chevron-thin-right"
+                  ></use>
+                </svg>
+              </div>
+              <div class="user-nav__menu-box">
+                <svg class="user-nav__menu-box-icon">
+                  <use
+                    xlink:href="img/sprite.svg#icon-document-landscape"
+                  ></use>
+                </svg>
+                <p class="user-nav__menu-box-text">Display</p>
+                <svg class="user-nav__menu-box-icon arrow">
+                  <use
+                    xlink:href="img/sprite.svg#icon-chevron-thin-right"
+                  ></use>
+                </svg>
+              </div>
+              <div class="user-nav__menu-box">
+                <svg class="user-nav__menu-box-icon">
+                  <use xlink:href="img/sprite.svg#icon-log-out"></use>
+                </svg>
+                <p class="user-nav__menu-box-text">Logout</p>
+                <svg class="user-nav__menu-box-icon arrow">
+                  <use
+                    xlink:href="img/sprite.svg#icon-chevron-thin-right"
+                  ></use>
+                </svg>
+              </div>
             </div>
           </div>
         </nav>
@@ -276,5 +343,7 @@
         </main>
       </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
